@@ -7,9 +7,9 @@ To initiate your Flask-MarcoPolo project
 
 """
 import logging
-logging.basicConfig(filename="logs/debug.log", filemode="w", level=logging.DEBUG, format="%(name) %(asctime)s %(levelname)s %(message)s"
+logging.basicConfig(filename="logs/debug.log", filemode="w", level=logging.DEBUG, format="%(name) %(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("MAIN")
-logger.debug("Starting"
+logger.debug("Starting")
 
 from flask import Flask
 from flask.ext.marcopolo import MarcoPolo

@@ -1,0 +1,48 @@
+{{set_page_info(title="SUSHI Source Editor", active_page="sushi")}}
+
+<h1>SUSHI Editor</h1>
+<div>
+<table id="sushi_sources" style="frame: 1" class="display">
+<thead><tr><th>Column 1</th><th>Column 2</th></tr></thead>
+<tbody>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+<tr><td>Column 1 data</td><td>Column 2 data</td></tr>
+</tbody>
+</table>
+</div>
+
+<script type="text/javascript">
+console.log("pre-ready function");
+$(document).ready( function () {
+    console.log("document ready function");
+    $('#sushi_sources').DataTable({ 
+        paging: false, 
+        scrollY: "10em", 
+        ordering: true,
+        fixedHeader: {
+            header: true,
+            footer: false
+        },
+        info: false
+    });
+} );
+</script>
+

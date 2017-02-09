@@ -7,7 +7,9 @@ Created on Thu Feb  2 19:26:05 2017
 """
 import datetime
 
-from mongoengine import *
+# from mongoengine import *
+
+from flask_mongoengine import Document
 
 class BaseModel(Document):
     meta = {

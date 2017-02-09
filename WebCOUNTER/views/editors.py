@@ -6,6 +6,11 @@ Created on Thu Feb  2 20:33:14 2017
 @author: scott
 """
 
+import logging
+logger = logging.getLogger(__name__)
+
+from autologging import traced, logged
+
 from flask import abort
 from flask.ext.marcopolo import (MarcoPolo,
                                  route,
@@ -15,12 +20,11 @@ from flask.ext.marcopolo import (MarcoPolo,
                                  set_cookie,
                                  get_cookie)
 
-
-class Index(MarcoPolo):
-    route_base = "/editors"
-
+@traced
+@logged(logger)
+class Editors(MarcoPolo):
     def index(self):
         return self.render()
     
-    def SUSHIEndpoints(self):
+    def sushi(self):
         return self.render()

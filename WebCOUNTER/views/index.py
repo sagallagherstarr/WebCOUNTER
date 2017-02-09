@@ -5,6 +5,10 @@ $project_name.views.index
 
 
 """
+import logging
+logger = logging.getLogger(__name__)
+
+from autologging import traced, logged
 
 from flask import abort
 from flask.ext.marcopolo import (MarcoPolo,
@@ -16,13 +20,16 @@ from flask.ext.marcopolo import (MarcoPolo,
                                  get_cookie)
 
 
+@traced
+@logged(logger)
 class Index(MarcoPolo):
     route_base = "/"
 
     def index(self):
         return self.render()
 
-
+@traced
+@logged(logger)
 class Example(MarcoPolo):
     """
     A example
